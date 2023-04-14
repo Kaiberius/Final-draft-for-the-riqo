@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>RI-QO</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styl.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="ui-header">
+        <h1 class="logo">RI-QO</h1>
+    </header>
+    <section class="webapp-body">
+        <div class="left-handle">
+            <div class="options">
+                    <div class="opt-list" id="art-list"><img src="/photos/artist.svg" alt="" class="svg-img"><h4 class="opt-header">Artist</h4></div>
+                    <div class="opt-list" id="diary"><img src="/photos/diary.svg" alt="" class="svg-img"><h4 class="opt-header">Diary</h4></div>
+                    <div class="opt-list" id="chatbot"><img src="/photos/chatbot.svg" alt="" class="svg-img"><h4 class="opt-header">ChatBot</h4></div>
+                    <div class="opt-list" id="suggestion"><img src="/photos/suggestions.svg" alt="" class="svg-img"><h4 class="opt-header">Suggestions</h4></div>
+                    <div class="opt-list" id="connect"><img src="/photos/connect.svg" alt="" class="svg-img"><h4 class="opt-header">Connect</h4></div>
+                    <div class="opt-list" id="settings"><img src="/photos/settings.svg" alt="" class="svg-img"><h4 class="opt-header">Settings</h4></div>
+            </div>
+            
+            <div class="logout-div">
+                    <div class="line-ui"></div>
+                    <div class="opt-list"><img src="/photos/logout.svg" alt="" class="svg-img"><h4 class="opt-header">Logout</h4></div>
+            </div>
+        </div>
+        <div class="artist-block">
+            <label class="arti-nam">Rumi</label>
+            <label class="arti-nam">William Shakespeare</label>
+            <label class="arti-nam">John Keats</label>
+            <label class="arti-nam">Percy Bysshe Shelley</label>
+            <label class="arti-nam">Lord Byron</label>
+            <label class="arti-nam">Elizabeth Barrett Browning</label>
+            <label class="arti-nam">Robert Browning</label>
+            <label class="arti-nam">Samuel Taylor Coleridge</label>
+            <label class="arti-nam">William Wordsworth</label>
+            <label class="arti-nam">Emily Dickinson</label>
+            <label class="arti-nam">Edgar Allan Poe</label>
+            <label class="arti-nam">Walt Whitman</label>
+            <label class="arti-nam">Langston Hughes</label>
+            <label class="arti-nam">Pablo Neruda</label>
+            <label class="arti-nam">Federico Garcia Lorca</label>
+            <label class="arti-nam">Rainer Maria Rilke</label>
+        </div>
+        <div class="right-screen">
+            <div class="qoute-block-ui">
+                <p id="ui-gen-quo"></p>
+            </div>
+            <button type="button" id="gen-btn-ui">Generate rizz</button>
+        </div>
+    </section>
+
+    <script>
+        const artSel = document.querySelector("#art-list");
+const pickArt = document.querySelectorAll(".arti-nam");
+
+artSel.addEventListener("click", () => {
+    const artBlock = document.querySelector(".artist-block");
+    artBlock.classList.toggle("block-active");
+    artSel.classList.toggle("selected");
+})
+
+pickArt.addEventListener("click", () => {
+    pickArt.classList.toggle("pickartSel");
+})
+    </script>
+</body>
+</html>
